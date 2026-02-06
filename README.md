@@ -92,3 +92,55 @@ Typical accuracy for this architecture is usually around **65%–75%**, dependin
 
 After training, the model is saved as:
 
+
+This file is later loaded inside the Streamlit app for prediction.
+
+---
+
+## 🌐 Streamlit Deployment (Colab + ngrok)
+
+A Streamlit web app is created (`app.py`) to:
+
+- Upload an image (jpg/png)
+- Resize it to 32×32
+- Normalize it
+- Predict the class using the trained CNN model
+- Display the predicted label
+
+Since Google Colab does not expose local ports directly, **ngrok** is used to create a public URL for the Streamlit app.
+
+---
+
+## 🛠️ Tools & Libraries Used
+
+- Python
+- TensorFlow / Keras
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Streamlit
+- pyngrok
+- PIL (Pillow)
+
+---
+
+## 🚀 How to Run
+
+### Option 1: Run Notebook (Recommended)
+Open the notebook in:
+
+- Google Colab
+- Jupyter Notebook / JupyterLab
+
+Then run all cells.
+
+---
+
+### Option 2: Run Streamlit Locally (Optional)
+
+#### 1) Install dependencies
+```bash
+pip install -r requirements.txt
+
+
+streamlit run app.py
